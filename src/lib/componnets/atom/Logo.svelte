@@ -36,7 +36,8 @@
 	@media (prefers-color-scheme: dark) {
 		a{
 			border:unset;
-			border-block: solid white 2px;
+			color: var(--color-text);
+			border-block: solid currentcolor 2px;
 		}
 		
 		img{filter: invert(1);}
@@ -45,19 +46,19 @@
 	@media (max-width: 400px){
 		a{
 			border:unset;
-			border-bottom: solid 2px;
+			color: var(--color-text);
+			border-bottom: solid currentcolor 2px;
 		}
 	}
 
 	@media (height < 450px){
 		a{
 			border:unset;
-			border-bottom: solid 2px;
+			border-bottom: solid currentcolor 2px;
 			align-self: start;
 			justify-content:start;
 		}
 		img{
-			/* display:none; */
 			min-width: 10dvw ;
 			width:14dvw;
 		}

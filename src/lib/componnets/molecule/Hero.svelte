@@ -33,7 +33,6 @@
 		color: var(--color-text);
 		container-type: inline-size;
 		animation: fadeInUp 1s ease forwards;
-		
 	}
 
 	p{
@@ -63,6 +62,4 @@
 			max-width:60%;
 		}
 	}
-
-	
 </style>
