@@ -1,0 +1,105 @@
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed, 
+  figure, figcaption, footer, header, hgroup, 
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+    font: inherit;
+    vertical-align: baseline;
+  }
+  /* HTML5 display-role reset for older browsers */
+  article, aside, details, figcaption, figure, 
+  footer, header, hgroup, menu, nav, section {
+    display: block;
+  }
+  body {
+    line-height: 1;
+  }
+  ol, ul {
+    list-style: none;
+  }
+  blockquote, q {
+    quotes: none;
+  }
+  blockquote:before, blockquote:after,
+  q:before, q:after {
+    content: '';
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  a {
+    text-decoration: initial !important;
+    font-family: "Karla", sans-serif;
+    color:black ;
+  }
+
+  :root {
+    /* new design background */
+    --inherit:inherit;
+    --black:black;
+    --white:white;
+    --gray-bg:#d5d5d5e7;
+    --tan-gray-bg:#EDEAE4;
+
+    --color-bg: var(--tan-gray-bg);
+    --color-bg-muted: var(--gray-bg);
+		--color-text: var(--inherit,var(--black));
+		--color-btn: var(--inherit,var(--white));
+    --color-heading: #262729;
+
+    --text-size-s:1rem;
+		--text-size-m:1.5rem;
+		--text-size-l:2.2rem;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-bg: rgb(34, 33, 30);
+      --color-bg-muted: #121212;
+      --color-bg-muted: rgb(39, 37, 33);
+      --color-text: color-mix(in srgb,#ffffff,var(--color-bg) 20%);
+      --color-btn: black;
+      --secondary-color: #6c757d;
+      --color-heading: #dee2e6;
+    }    
+  }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+
+  @supports (interpolate-size: allow-keywords){
+	  interpolate-size: allow-keywords;
+	  transition-behavior: allow-discrete;
+	  scroll-behavior: smooth;
+    font-size-adjust: 0.5;
+    @view-transition {
+      navigation: auto;
+    }
+  }
+}
+
+
