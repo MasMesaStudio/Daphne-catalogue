@@ -49,6 +49,11 @@
     color:black ;
   }
 
+  :is(a,p)::selection{
+		background-color: var(--color-highlight);
+		color: var(--color-highlight-text);
+	}
+
   :root {
     /* new design background */
     --inherit:inherit;
@@ -62,6 +67,8 @@
 		--color-text: var(--inherit,var(--black));
 		--color-btn: var(--inherit,var(--white));
     --color-heading: #262729;
+    --color-highlight:yellow;
+    --color-highlight-text:var(black);
 
     --text-size-s:1rem;
 		--text-size-m:1.5rem;
