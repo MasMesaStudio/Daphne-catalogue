@@ -3,22 +3,21 @@
 	import catalogue from '$lib/Art Catalogue Daphne Bleeker.pdf'
 	import {fade,fly} from 'svelte/transition'
 	import {onMount} from 'svelte'
-
+	const title = $state('Daphne Bleeker catalogue')
+	const traject = $state('2018 - Now')
+	const DText = $state('Get a copy')
 </script>
 
 <section class="hero" >
 	<Bar>
-		<p>Daphne Bleeker catalogue</p>
-		<p>2018 - Now</p>
+		<p>{title}</p>
+		<p>{traject}</p>
 	</Bar>
-
 	<Logo/>
-
 	<Bar>
-		<p class="download-bar-text">Get a copy </p>
+		<p cass="download-bar-text">{DText} </p>
 		<DownloadBtn content={catalogue} onClick={() => {}}/>  
 	</Bar>
-
 </section>
 
 <style>

@@ -2,7 +2,6 @@
 	let {type = 'link',content, text = 'Download', onClick}: {type?: string, text?: string,content:string, onClick: () => void} = $props();
 </script>
 
-
 {#if type === 'button'}
 	<button onclick={onClick} title="Download {type}">
 	{text}
