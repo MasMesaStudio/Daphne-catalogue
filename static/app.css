@@ -51,7 +51,7 @@
 
   :is(a,p)::selection{
 		background-color: var(--color-highlight);
-		color: var(--color-highlight-text);
+		color: var(--color-highlight-text) !important;
 	}
 
   :root {
@@ -68,7 +68,7 @@
 		--color-btn: var(--inherit,var(--white));
     --color-heading: #262729;
     --color-highlight:yellow;
-    --color-highlight-text:var(black);
+    --color-highlight-text:black;
 
     --text-size-s:1rem;
 		--text-size-m:1.5rem;
@@ -84,6 +84,7 @@
       --color-btn: black;
       --secondary-color: #6c757d;
       --color-heading: #dee2e6;
+       --color-highlight-text:var(--color-bg);
     }    
   }
 
