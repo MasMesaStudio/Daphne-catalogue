@@ -17,6 +17,12 @@
 		padding-block: 10px;
 	}
 
+	.bar > :global(:is(a,button):nth-child(1):nth-last-of-type(1)){
+		width: 100%;
+		max-width: 100%;
+		font-size: 1.25rem;
+	}
+
 	@media (max-width: 400px){
 		.bar{
 			flex-direction: column;
@@ -25,9 +31,15 @@
 
 		.bar:nth-of-type(1){
 			order: 2;
+			/* outline: solid yellow; */
 		}
 		.bar:nth-of-type(2){
-			order: 3;
+			order: 0;
+			font-size: max(1rem,100%);
+			max-width: 100%;
+		}
+		.bar:nth-of-type(3){
+			order: 1;
 		}
 	}
 </style>

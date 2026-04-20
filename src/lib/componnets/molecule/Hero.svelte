@@ -1,5 +1,5 @@
 <script>
-	import {Bar,DownloadBtn,Logo} from '$lib'
+	import {Bar,CatOptionBtn,Logo} from '$lib'
 	import catalogue from '$lib/Art Catalogue Daphne Bleeker.pdf'
 	import {fade,fly} from 'svelte/transition'
 	import {onMount} from 'svelte'
@@ -15,8 +15,11 @@
 	</Bar>
 	<Logo/>
 	<Bar>
-		<p cass="download-bar-text">{DText} </p>
-		<DownloadBtn content={catalogue} onClick={() => {}}/>  
+		<CatOptionBtn content={catalogue} type="open" text="Open Catalogue" />  
+	</Bar>
+	<Bar>
+		<p class="download-bar-text">{DText} </p>
+		<CatOptionBtn content={catalogue} type="link" />  
 	</Bar>
 </section>
 
