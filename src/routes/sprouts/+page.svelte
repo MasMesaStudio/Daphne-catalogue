@@ -50,9 +50,6 @@
 		scale: 1.05;
 		filter: blur(0) grayscale(0) brightness(0.9) contrast(2);
 		transition: filter 1s ease,scale 1s ease ;
-		/* display: none; */
-		
-		
 	}
 
 	.info-container{
@@ -73,9 +70,7 @@
 		--scale:75%;
 		position: absolute;
 		filter: grayscale(0) brightness(0.6) contrast(2);
-		transition: filter 2s ease, all 200ms ease;
-
-		
+		transition: filter 2s ease, all 200ms ease;		
 		
 		&.artist{
 			height: fit-content;
@@ -121,30 +116,29 @@
 
 		.info-inner-layer img{
 			filter: grayscale(2) contrast(2) brightness(0);
-
-			&.artist{
-				inset-inline: 15% ;
-				/* top: 7cqh; */
-				/* filter: blur(2px); */
-			}
-			&.exhibition{
-				inset-inline: 20% ;
-				/* bottom: 7cqh; */
-				/* filter: blur(2px); */
-			}
 		}
 	}
 
 	@media(max-width:450px){
 		:global(.logo-square a img){
-			/* display: none; */
 			outline: solid .1px rgba(129, 129, 129, 0.002) ;
-			/* appearance: none; */
-
 		}
 
 		.info-inner-layer img{
 			display: none ;
+		}
+
+		:global(.hero:is(:hover,:focus-within)){
+		
+			:global(.logo-square a img){
+				filter: blur(.5px) grayscale(1) brightness(0.6);
+				scale: 1.047;
+				transition: filter 4s ease 1s,scale 2s ease ;
+			}
+
+			.info-inner-layer img{
+				filter: grayscale(2) contrast(2) brightness(0);
+			}
 		}
 	}
 
@@ -190,6 +184,16 @@
 				filter: grayscale(0) brightness(2) contrast(1);
 			}
 		}
+
+		@media(max-width:450px){
+			:global(.hero:is(:hover,:focus-within)) :global(.logo-square a img){
+					filter: blur(0) grayscale(0) brightness(1.6) contrast(2);
+					scale: 1.047;
+					transition: filter 1s ease,scale 1s ease ;
+				}
+		}
+
+		
 	 
 	}
 </style>
