@@ -32,8 +32,7 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: end;
-		padding-bottom: 15dvh;
-		padding-bottom: auto;
+		padding-bottom: 13dvh;
 	}
 
 	@media (height < 450px){
