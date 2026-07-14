@@ -20,6 +20,10 @@
 
 </script>
 
+<svelte:head>
+	<meta name="description" content="Foodware Exhibition" />
+</svelte:head>
+
 	<Hero {...sprouts} >
 		<div class="info-container">
 		<div class="info-inner-layer">
