@@ -20,7 +20,7 @@
 	<Bar>
 		<p>{title}</p>
 		<p>{traject}</p>
-		{#each extraContent as x }
+		{#each extraContent as x (x.innerText) }
 			<p class="innerText">{x.innerText}</p>
 		{/each}
 	</Bar>
