@@ -13,7 +13,7 @@
 		title:'',
 		traject:'',
 		Dtext:null,
-		Mimg:'/sprouts/squaretje.png',
+		Mimg:'./sprouts/squaretje.png',
 		catalogueSrc:catalogue,
 		extraContent:sproutInfos
 	}
@@ -45,7 +45,10 @@
 	:global(.logo-square a img){
 		scale: 1.05;
 		filter: blur(0) grayscale(0) brightness(0.9) contrast(2);
-		transition: filter 1s ease ;
+		transition: filter 1s ease,scale 1s ease ;
+		/* display: none; */
+		
+		
 	}
 
 	.info-container{
@@ -66,16 +69,10 @@
 		--scale:75%;
 		position: absolute;
 		filter: grayscale(0) brightness(0.6) contrast(2);
-		transition: filter 2s ease !important;
+		transition: filter 2s ease, all 200ms ease;
 
 		
-		&.time{
-			width: fit-content;
-			height: 85%;
-			right: 0;
-			inset-block:10%;
-			top: 8%;
-		}
+		
 		&.artist{
 			height: fit-content;
 			width: var(--scale);
@@ -90,12 +87,21 @@
 			bottom: 0;
 			text-align: center;
 		}
+		&.time{
+			width: fit-content;
+			height: 85%;
+			right: 0;
+			left: auto;
+			inset-block: 8% 10%;
+			max-width: 1rem;
+		}
 		&.adres{
 			width: fit-content;
-			height: 100%;
-			height: var(--scale);
+			max-width: 1rem;
+			height: var(--scale,100%);
 			height: 70%;
 			left: 0;
+			right: auto;
 			inset-block:calc((100% - var(--scale)) / 2) ;
 			top: 8%;
 		}
@@ -106,17 +112,35 @@
 		:global(.logo-square a img){
 			filter: blur(2.5px) grayscale(1) brightness(0.5);
 			scale: 1.047;
-			transition: filter 1s ease ;
+			transition: filter 1s ease,scale 1s ease ;
 		}
 
 		.info-inner-layer img{
 			filter: grayscale(2) contrast(2) brightness(0);
+
+			&.artist{
+				inset-inline: 15% ;
+				/* top: 7cqh; */
+				/* filter: blur(2px); */
+			}
+			&.exhibition{
+				inset-inline: 20% ;
+				/* bottom: 7cqh; */
+				/* filter: blur(2px); */
+			}
 		}
 	}
 
-	@media(max-width:400px){
+	@media(max-width:450px){
+		:global(.logo-square a img){
+			/* display: none; */
+			outline: solid .1px rgba(129, 129, 129, 0.002) ;
+			/* appearance: none; */
+
+		}
+
 		.info-inner-layer img{
-			display: none;
+			display: none ;
 		}
 	}
 
@@ -136,6 +160,8 @@
 
 		:global(.hero .logo-square a img){
 			filter: blur(0) grayscale(0) brightness(1.9) contrast(2) ;
+			background-attachment: fixed;
+			background-color: transparent;
 			transition:filter 1s ease ;
 		}
 		
@@ -146,7 +172,7 @@
 
 		:global(.hero:is(:hover,:focus-within)){
 		
-			:global( .logo-square a img){
+			:global(.logo-square a img){
 				filter: blur(2.3px) grayscale(0) brightness(1.6) contrast(2);
 				transition: filter 1s ease ;
 			}

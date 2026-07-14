@@ -23,16 +23,19 @@
 		font-size: 1.25rem;
 	}
 
-	@media (max-width: 400px){
+	@media (max-width: 450px){
 		.bar{
 			flex-direction: column;
 			gap: 10px;
 		}
-
+		
 		.bar:nth-of-type(1){
 			order: 2;
-			/* outline: solid yellow; */
+			padding-block: 1cqi;
 		}
+	}
+	@media (max-width: 400px){
+
 		.bar:nth-of-type(2){
 			order: 0;
 			font-size: max(1rem,100%);
