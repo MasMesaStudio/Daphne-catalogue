@@ -84,7 +84,8 @@
       --color-btn: black;
       --secondary-color: #6c757d;
       --color-heading: #dee2e6;
-       --color-highlight-text:var(--color-bg);
+      --color-highlight:yellow;
+      --color-highlight-text:var(--color-bg);
     }    
   }
 

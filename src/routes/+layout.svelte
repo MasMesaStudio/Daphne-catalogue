@@ -3,8 +3,6 @@
 	import Footer from '$lib/componnets/molecule/Footer.svelte';
 	// import '../../static/app.css';
 
-
-
 	let { children } = $props();
 </script>
 
@@ -35,6 +33,7 @@
 		align-items: center;
 		justify-content: end;
 		padding-bottom: 15dvh;
+		padding-bottom: auto;
 	}
 
 	@media (height < 450px){

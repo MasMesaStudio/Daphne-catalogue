@@ -1,7 +1,13 @@
-<h1>
-	<a href="/">
-		<img width=100 height=200 src="/687406890100dcdbb2d5d3a2_DaphneBleeker logo2.png" alt="Daphne Bleeker Logo">
+<script>
+	import { resolve } from '$app/paths';
+	let {img = '',children} = $props();
+</script>
+
+<h1 class="logo-square">
+	<a href={resolve('/')}>
+		<img width=100 height=200 src={img || "/687406890100dcdbb2d5d3a2_DaphneBleeker logo2.png"} alt="Daphne Bleeker Logo">
 	</a>
+	{@render children?.()}
 </h1>
 
 <style>

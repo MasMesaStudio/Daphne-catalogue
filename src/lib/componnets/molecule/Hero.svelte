@@ -1,25 +1,38 @@
 <script>
 	import {Bar,CatOptionBtn,Logo} from '$lib'
-	import catalogue from '$lib/Art Catalogue Daphne Bleeker.pdf'
-	import {fade,fly} from 'svelte/transition'
-	import {onMount} from 'svelte'
-	const title = $state('Daphne Bleeker catalogue')
-	const traject = $state('2018 - Now')
-	const DText = $state('Get a copy')
+	import catalogue from '$lib/catalouges-pdf/Art Catalogue Daphne Bleeker.pdf'
+	// import {fade,fly} from 'svelte/transition'
+	// import {onMount} from 'svelte'
+	let {
+		title = 'Daphne Bleeker catalogue',
+		traject = '2018 - Now',
+		DText = 'Get a copy',
+		Mimg,
+		catalogueSrc = catalogue,
+		children,
+		extraContent
+		// logoExtra
+	} = $props()	
+
 </script>
 
 <section class="hero" >
 	<Bar>
 		<p>{title}</p>
 		<p>{traject}</p>
+		{#each extraContent as x }
+			<p class="innerText">{x.innerText}</p>
+		{/each}
 	</Bar>
-	<Logo/>
+	<Logo img="{Mimg}">
+		{@render children?.()}
+	</Logo>
 	<Bar>
-		<CatOptionBtn content={catalogue} type="open" text="Open Catalogue" />  
+		<CatOptionBtn content={catalogueSrc} type="open" text="Open Catalogue" />  
 	</Bar>
 	<Bar>
 		<p class="download-bar-text">{DText} </p>
-		<CatOptionBtn content={catalogue} type="link" />  
+		<CatOptionBtn content={catalogueSrc} type="link" />  
 	</Bar>
 </section>
 
@@ -48,6 +61,10 @@
 		line-height:1.3;
 	}
 
+	p.innerText{
+		display: none;
+	}
+
 	@keyframes fadeInUp {
 		0% {
 			opacity: 0;
@@ -62,6 +79,12 @@
 	@media (height < 450px){
 		.hero{
 			max-width:60%;
+		}
+	}
+
+	@media (max-width: 400px){
+		p.innerText{
+			display: inline;
 		}
 	}
 </style>
