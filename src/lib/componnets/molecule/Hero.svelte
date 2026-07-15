@@ -1,8 +1,6 @@
 <script>
 	import {Bar,CatOptionBtn,Logo} from '$lib'
 	import catalogue from '$lib/catalouges-pdf/Art Catalogue Daphne Bleeker.pdf'
-	// import {fade,fly} from 'svelte/transition'
-	// import {onMount} from 'svelte'
 	let {
 		title = 'Daphne Bleeker catalogue',
 		traject = '2018 - Now',

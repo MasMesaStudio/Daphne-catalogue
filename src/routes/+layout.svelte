@@ -1,7 +1,6 @@
 <script lang="ts">
 	import favicon from '$lib/assets/D-logo.png';
 	import Footer from '$lib/componnets/molecule/Footer.svelte';
-	// import '../../static/app.css';
 
 	let { children } = $props();
 </script>
