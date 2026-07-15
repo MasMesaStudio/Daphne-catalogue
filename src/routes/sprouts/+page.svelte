@@ -1,6 +1,6 @@
 <script>
 	import {Hero} from '$lib';
-	import catalogue from '$lib/catalouges-pdf/foodware Catalogue Daphne Bleeker (2).pdf'
+	import catalogue from '$lib/catalouges-pdf/foodware Catalogue Daphne Bleeker.pdf'
 
 	let sproutInfos = [
 		{src:'/sprouts/Catalogue-DaphneBleeker.png', alt:'artist',innerText:'Daphne Bleeker'},
