@@ -29,6 +29,7 @@
 		<div class="info-inner-layer">
 			{#each sproutInfos as info (info.src)}
 				<img src={info.src} alt={info.alt} class={info.alt} width="50" height="50">
+				<p class={info.alt}>{info.innerText}</p>
 			{/each}
 		</div>
 		</div>
@@ -66,11 +67,29 @@
 		container-type: inline-size;
 	}
 
-	.info-inner-layer img{
+	.info-inner-layer p{
+		position: absolute;
+		font-size: 1.2rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		color: var(--color-highlight);
+		width: fit-content;
+		text-orientation: mixed;
+ 		text-orientation: upright;
+ 		text-orientation: sideways-right;
+ 		text-orientation: sideways;
+ 		text-orientation: use-glyph-orientation;
+		writing-mode: vertical-rl;
+		display: none;
+		
+	
+	}
+	.info-inner-layer :is(img,p){
 		--scale:75%;
 		position: absolute;
 		filter: grayscale(0) brightness(0.6) contrast(2);
-		transition: filter 2s ease, all 200ms ease;		
+		transition: filter 2s ease, all 200ms ease;	
+		
 		
 		&.artist{
 			height: fit-content;
@@ -103,6 +122,7 @@
 			right: auto;
 			inset-block:calc((100% - var(--scale)) / 2) ;
 			top: 8%;
+			rotate: 90deg;
 		}
 	}
 
