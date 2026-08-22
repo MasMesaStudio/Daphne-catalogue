@@ -122,7 +122,7 @@
 			right: auto;
 			inset-block:calc((100% - var(--scale)) / 2) ;
 			top: 8%;
-			rotate: 90deg;
+			/* rotate: 90deg; */
 		}
 	}
 
